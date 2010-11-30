@@ -1,11 +1,9 @@
 <html>
   <head>
-    <title><%name%></title>
-    <link type="text/css" rel="stylesheet" href="ex.css?3.2"/>
-    <script type="text/javascript" src="../protovis-r3.2.js"></script>
-    <script type="text/javascript" src="dot.js"></script>
-    <style type="text/css">
+    <title><%=name%></title>
+    <script type="text/javascript" src="<%=jsfile%>"></script>
 
+    <style type="text/css">
 #fig {
   width: 430px;
   height: 425px;
@@ -16,12 +14,16 @@
   <body><div id="center"><div id="fig">
     <script type="text/javascript+protovis">
 
+/*data*/
+
+var data = <%=d%>
+
+
 /* Sizing and scales. */
 var w = 400,
     h = 400,
-    x = pv.Scale.linear(0, 99).range(0, w),
-    y = pv.Scale.linear(0, 1).range(0, h),
-    c = pv.Scale.log(1, 100).range("orange", "brown");
+    x = pv.Scale.linear(<%=xrng[1]%>, <%=xrng[2]%>).range(0, w),
+    y = pv.Scale.linear(<%=yrng[1]%>, <%=yrng[2]%>).range(0, h)
 
 /* The root panel. */
 var vis = new pv.Panel()
@@ -56,10 +58,8 @@ vis.add(pv.Panel)
   .add(pv.Dot)
     .left(function(d) x(d.x))
     .bottom(function(d) y(d.y))
-    .strokeStyle(function(d) c(d.z))
-    .fillStyle(function() this.strokeStyle().alpha(.2))
-    .size(function(d) d.z)
-    .title(function(d) d.z.toFixed(1));
+    .strokeStyle("#000")
+    .fillStyle(function() this.strokeStyle().alpha(.2));
 
 vis.render();
 
