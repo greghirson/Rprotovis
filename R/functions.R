@@ -23,3 +23,8 @@ RP = function(name, data, outfile = "~/Desktop/out.html"){
 	brew(tfile, outfile)
 	}
 	
+testdata = function(n = 1000, seed = 100){
+	set.seed(seed)
+	data.frame(x = rnorm(n), y = rnorm(n))
+	}
+	
