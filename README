@@ -3,3 +3,6 @@ to be easily generated from within R, transparently.
 
 The initial goal is to use RGraphicsDevice from Omegahat to
 implement.
+
+Currently, it is using brew to fill in a template of the example
+scatterplot file from http://vis.stanford.edu/protovis/ex/dot.html
