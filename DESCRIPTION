@@ -1,0 +1,10 @@
+Package: RProtovis
+Version: 0.1-1
+Date: 2010-11-30
+Title: A Protovis graphics device
+Author: Greg Hirson <ghirson@ucdavis.edu>
+Maintainer: Greg Hirson <ghirson@ucdavis.edu>
+Depends: R (>= 2.8.1), XML, RCurl, RGraphicsDevice, RAutoGenRunTime, RJSONIO
+Description: Provides functionality to use Protovis as a graphics device from
+  within R.
+License: BSD
