@@ -4,7 +4,7 @@ Date: 2010-11-30
 Title: A Protovis graphics device
 Author: Greg Hirson <ghirson@ucdavis.edu>
 Maintainer: Greg Hirson <ghirson@ucdavis.edu>
-Depends: R (>= 2.8.1), XML, RCurl, RGraphicsDevice, RAutoGenRunTime, RJSONIO
+Depends: R (>= 2.8.1), RJSONIO, brew
 Description: Provides functionality to use Protovis as a graphics device from
   within R.
 License: BSD
