@@ -1,0 +1,5 @@
+The intention of this package is to allow Protovis graphics
+to be easily generated from within R, transparently.
+
+The initial goal is to use RGraphicsDevice from Omegahat to
+implement.
