@@ -12,8 +12,8 @@ should work, as should
     plot(x, y)
 
 The other way to do this would be forgo all of the formula business and
-require explicit x, y values, like [ggplot2](http://had.co.nz/ggplot2
-title = "ggplot2").
+require explicit x, y values, like [ggplot2](http://had.co.nz/ggplot2/
+"ggplot2").
     
 ## Plot type
 Two different methods for picking the correct type of plot are possible.
