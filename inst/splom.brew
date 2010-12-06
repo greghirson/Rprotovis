@@ -1,0 +1,11 @@
+py;
+  s.x1 = position[t.px].invert(d.x);
+  s.x2 = position[t.px].invert(d.x + d.dx);
+  s.y1 = position[t.py].invert(size - d.y - d.dy);
+  s.y2 = position[t.py].invert(size - d.y);
+  dot.context(null, 0, function() this.render());
+}
+
+    </script>
+  </div></div></body>
+</html>
