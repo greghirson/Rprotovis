@@ -6,9 +6,12 @@ data(faithful)
 jsonify = function(dataframe){
 	i1 = paste((apply(dataframe, 1, toJSON)), collapse = ",")
 	i2 = paste("[", i1, "]", collapse = "")
-	gsub("\\\"", "", i2)
-	
-	}
+	i3 = gsub("\\\"", "", i2)
+        con <- textConnection(i3)
+        itmp <- readLines(con)
+        close(con)
+        paste(gsub(": ([[:alpha:]]+)", ": \\\"\\1\\\"", itmp), collapse = "\n")
+      }
 	
 
 

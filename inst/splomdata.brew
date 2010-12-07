@@ -1,0 +1,3 @@
+var species = <%=gvars%>
+var traits = <%=nvars%>
+var flowers = <%=d%>
