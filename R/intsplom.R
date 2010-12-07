@@ -28,8 +28,3 @@ jsonifyvar <- function(stringvec){
   t3 = paste("[", t2, "]", sep = " ")
   return(t3)
 }
-
-
-testquote <- function(data){
-  as.character(substitute(data))
-}
