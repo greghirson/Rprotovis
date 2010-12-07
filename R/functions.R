@@ -17,8 +17,8 @@ jsonify = function(dataframe){
 
 RP = function(name, data, outfile = "~/Desktop/out.html"){
 	d = jsonify(data)
-	tfile = system.file("template.brew", package="RProtovis")
-	jsfile = system.file("protovis-r3.2.js", package="RProtovis")
+	tfile = system.file("template.brew", package="Rprotovis")
+	jsfile = system.file("protovis-r3.2.js", package="Rprotovis")
 	#plot params to be filled in by brew
 	name = name
 	xrng = range(data[,1])

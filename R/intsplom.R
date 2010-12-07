@@ -17,7 +17,7 @@ intsplom <- function(data, group, title = "Plot",
   mainbrew <- "~/Rdev/Rprotovis/inst/splom.brew"  ## temporary brew file
   brew(file = databrew, output = paste(outdir, outdata, sep = ""))
   brew(file = mainbrew, output = paste(outdir, outfile, sep = ""))
-  file.copy(system.file("protovis-r3.2.js", package = "RProtovis"),
+  file.copy(system.file("protovis-r3.2.js", package = "Rprotovis"),
             paste(outdir, "protovis-r3.2.js", sep = ""))
   
 }
