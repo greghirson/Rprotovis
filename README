@@ -6,3 +6,8 @@ implement.
 
 Currently, it is using brew to fill in a template of the example
 scatterplot file from http://vis.stanford.edu/protovis/ex/dot.html
+
+ChangeLog
+
+0.1-3
+	*intsplom updated to use up to 10 colors

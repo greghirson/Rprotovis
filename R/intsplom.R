@@ -10,6 +10,8 @@ intsplom <- function(data, group, title = "Plot",
 
   nvars <- jsonifyvar(names(data)[-groupvar.ind])
 
+  cols <- makecolors(length(unique(data[[group]])))
+  
   if(!is.null(outdir)) dir.create(outdir)
 
   d <- jsonify(data)
@@ -27,4 +29,22 @@ jsonifyvar <- function(stringvec){
   t2 = paste(t1, collapse = ", ")
   t3 = paste("[", t2, "]", sep = " ")
   return(t3)
+}
+
+
+makecolors <- function(n){
+  #uses "Set 3" from RColorBrewer
+  cols <- c("#8DD3C7", "#FFFFB3", "#BEBADA", "#FB8072", "#80B1D3",
+            "#FDB462", "#B3DE69", "#FCCDE5", "#D9D9D9", "#BC80BD")
+  
+  ncols <- cols[(seq(n))]
+  rgbcols <- round(col2rgb(ncols)/255, 2)*100
+
+  dimcols <- dim(rgbcols)
+  dimchar <- matrix(paste(as.character(rgbcols), "%", sep = ""), nrow = dimcols[1])
+  
+  nrgb <- apply(dimchar, 2, paste, collapse = ",")
+  outcol <- paste("\"rgba(", nrgb, ",0.7)\"", sep = "", collapse = ",\n")
+  outcol <- paste(outcol, "),", sep = "")
+  return(outcol)
 }

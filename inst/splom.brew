@@ -22,9 +22,7 @@ var s;
 /* fixed at three colors presently*/
 var grey = pv.rgb(144, 144, 144, .2),
     color = pv.colors(
-        "rgba(50%, 0%, 0%, .5)",
-        "rgba(0%, 50%, 0%, .5)",
-        "rgba(0%, 0%, 50%, .5)"),
+        <%= cols%>
     position = pv.dict(variables, function(t)
         pv.Scale.linear(data, function(d) d[t])
         .range(0, size));
