@@ -14,3 +14,11 @@ USA <- USArrests
 USA$cluster = paste("Cluster", letters[cl], sep = "")
 
 intsplom(USA, "cluster", outfile = "USArrests.html")
+
+#mtcars - need to turn cyl into word version with lookup
+
+lookup = c(six = 6, four = 4, eight = 8)
+mtc = mtcars
+mtc$cyl = names(lookup)[match(mtc$cyl, lookup)]
+
+intsplom(mtc, "cyl", outfile = "mtc.html")
